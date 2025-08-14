@@ -1,1 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int numero;
+
+    printf("Digite um número inteiro: ");
+    scanf("%d", &numero);
+
+    // Verifica divisibilidade
+    int div2 = (numero % 2 == 0);
+    int div3 = (numero % 3 == 0);
+
+    if ((div2 || div3) && !(div2 && div3)) {
+        printf("O número %d é divisível por 2 ou por 3, mas não por ambos.\n", numero);
+    } else {
+        printf("O número %d NÃO é divisível por 2 ou por 3.\n", numero);
+    }
+
+    return 0;
+}
 
